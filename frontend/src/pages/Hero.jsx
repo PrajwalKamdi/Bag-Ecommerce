@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import BannerM from "../assets/BannerM.png"; // For screens < 600px
-import hero02 from "../assets/hero02.jpg"; // For screens >= 1200px
+import Hero02 from "../assets/Hero02.jpg"; // For screens >= 1200px
 import { NavLink } from "react-router-dom";
 // import BannerL from "../assets/BannerL.jpg"; // NEW: Add a mid-size banner for better design control
 
@@ -12,7 +12,7 @@ export default function Hero() {
   function getImageByWidth(width) {
     if (width < 600) return BannerM;
     // if (width < 1200) return BannerL; // Use a dedicated image for tablets/mid-size
-    return hero02;
+    return Hero02;
   }
 
   const [imageSrc, setImageSrc] = useState(getImageByWidth(window.innerWidth));
